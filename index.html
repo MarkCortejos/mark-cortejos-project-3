@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="styles.css">
+  <title>Mad Max Name Generator</title>
+</head>
+<body>
+  <div class="wrapper">
+
+    <header>
+      <h1>Mad Max</h1>
+      <h2>Name Generator</h2>
+      
+      <p>The Gas Wars left the world a blighted, post-apocalyptic desert...</p>
+      <p>Who you were before, matters no longer. Now, you ride into the lawless, bandit-infested wastes as...</p>
+    </header>
+    
+    <main>
+
+      <div class="generated-name">
+        <h3></h3>
+      </div>
+      
+      <div class="generator">
+        <p>Entering your first name and last name and click generate to roll your new name! If you want to save a name, you can do so by toggling off the randomizer for those fields.</p>
+        
+        <form action="">
+          <div class="flex-container">
+            <div>
+              <label for="first-name"><span class="visually-hidden">Enter First Name</span></label>
+              <input type="text" id="first-name" name="first-name" placeholder="Name">
+            </div>
+            
+            <div class="randomizer">
+              <input type="checkbox" id="first-randomizer" name="first-randomizer" value="first-name" checked>
+              <label for="first-randomizer"><i class="fas fa-dice"></i></label>
+            </div>
+          </div>
+          
+          <div class="flex-container">
+            <div>
+              <label for="second-name"><span class="visually-hidden">Enter Surname</span></label>
+              <input type="text" id="second-name" name="second-name" placeholder="Surname">
+            </div>
+            
+            <div class="randomizer">
+              <input type="checkbox" id="second-randomizer" name="second-randomizer" value="second-name" checked>
+              <label for="second-randomizer"><i class="fas fa-dice"></i></label>
+            </div>
+          </div>
+          
+          <div class="flex-container">
+            <div>
+              <label for="car-name"><span class="visually-hidden">Enter Car Name</span></label>
+              <input type="text" id="car-name" name="car-name" placeholder="Car Name">
+            </div>
+            
+            <div class="randomizer">
+              <input type="checkbox" id="car-randomizer" name="car-randomizer" value="car-name" checked>
+              <label for="car-randomizer"><i class="fas fa-dice"></i></label>
+            </div>
+          </div>
+          
+          <input type="submit" value="Generate">
+        </form> 
+      
+      </div> <!-- END GENERATOR -->
+    </main>
+    
+  </div> <!-- END WRAPPER -->
+  
+  <footer>
+    <p>All rights to the Mad Max franchise are reserved by Warner Bros.</p>
+  </footer>
+  
+  <!-- jQuery and JS script -->
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
