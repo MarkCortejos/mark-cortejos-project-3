@@ -15,18 +15,10 @@
 
     <header>
       <h1>Mad Max</h1>
-      <h2>Name Generator</h2>
-      
-      <p>The Gas Wars left the world a blighted, post-apocalyptic desert...</p>
-      <p>Who you were before, matters no longer. Now, you ride into the lawless, bandit-infested wastes as...</p>
+      <h2>Name Generator</h2>      
     </header>
     
     <main>
-
-      <div class="generated-name">
-        <h3></h3>
-      </div>
-      
       <div class="generator">
         <p>Enter your first and last name and click generate to roll your new persona! If you want to save a name, you can do so by toggling off the randomizer for those textboxes.</p>
         
@@ -38,7 +30,7 @@
             </div>
             
             <div class="randomizer">
-              <input type="checkbox" id="first-randomizer" name="first-randomizer" value="first-name" checked>
+              <input type="checkbox" id="first-randomizer" name="first-randomizer" value="first" checked>
               <label for="first-randomizer"><i class="fas fa-dice"></i></label>
             </div>
           </div>
@@ -50,7 +42,7 @@
             </div>
             
             <div class="randomizer">
-              <input type="checkbox" id="second-randomizer" name="second-randomizer" value="second-name" checked>
+              <input type="checkbox" id="second-randomizer" name="second-randomizer" value="second" checked>
               <label for="second-randomizer"><i class="fas fa-dice"></i></label>
             </div>
           </div>
@@ -58,11 +50,11 @@
           <div class="flex-container">
             <div>
               <label for="car-name"><span class="visually-hidden">Enter Car Name</span></label>
-              <input type="text" id="car-name" name="cars" placeholder="Car Name">
+              <input type="text" id="car-name" name="car" placeholder="Car Name">
             </div>
             
             <div class="randomizer">
-              <input type="checkbox" id="car-randomizer" name="car-randomizer" value="car-name" checked>
+              <input type="checkbox" id="car-randomizer" name="car-randomizer" value="car" checked>
               <label for="car-randomizer"><i class="fas fa-dice"></i></label>
             </div>
           </div>
@@ -71,6 +63,13 @@
         </form> 
       
       </div> <!-- END GENERATOR -->
+
+      <div class="generated-name">
+        <p>The Gas Wars left the world a blighted, post-apocalyptic desert...</p>
+        <p>Who you were before, matters no longer. Now, you ride into the lawless, bandit-infested wastes as...</p>
+        <h3></h3>
+      </div>
+
     </main>
     
   </div> <!-- END WRAPPER -->
@@ -81,6 +80,7 @@
   
   <!-- jQuery and JS script -->
   <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+  
   <script src="scripts.js"></script>
 </body>
 </html>

@@ -82,7 +82,7 @@ myApp.second = [
   'the Massive'
 ];
 
-myApp.cars = [
+myApp.car = [
   'V8-Interceptor',
   'War Rig',
   'Razor Cola',
@@ -93,9 +93,9 @@ myApp.cars = [
 ];
 
 myApp.init = function() {
-  myApp.randomizeField($('input[id=first-name]'), myApp.first);
-  myApp.randomizeField($('input[id=second-name]'), myApp.second);
-  myApp.randomizeField($('input[id=car-name]'), myApp.cars);
+  myApp.randomizeName(myApp.first);
+  myApp.randomizeName(myApp.second);
+  myApp.randomizeName(myApp.car);
 }
 
 // given an array, 
@@ -104,39 +104,21 @@ myApp.generateRand = function(array) {
   return Math.floor(Math.random() * array.length);
 };
 
-// given a text field and a name array, 
-  // generate a random name from the passed array and displays it in the passed text field
-myApp.randomizeField = function(textField, nameArray) {
+// given a name array, 
+  // generates a random name from the passed array and returns it
+myApp.randomizeName = function(nameArray) {
   const randNum = myApp.generateRand(nameArray);
-  textField.val(nameArray[randNum]);
+  return nameArray[randNum];
 };
 
-// create string from fields and displays it
-myApp.generateString = function() {
-  
-  const first = $('input[id=first-name]').val();
-  const second = $('input[id=second-name]').val();
-  const car = $('input[id=car-name]').val();
+// create string from inputs and displays it
+myApp.generateString = function(nameObject) {
+  const first = nameObject.first;
+  const second = nameObject.second;
+  const car = nameObject.car;
   const string = `${first} ${second}, driver of the ${car}!`;
   $('.generated-name h3').text(string);
 }
-
-// check if the text inputs are letters or empty strings
-myApp.checkInput = function() {
-  const input = []
-
-  $.each($('input[type=text]'), function () {
-    input.push($(this).val().charAt(0));
-  })
-
-  const regex = /^[a-zA-Z]+$/;
-  if (input.match(regex) || input === '') {
-    return true
-  } else {
-    alert("Oops, the inputted text can only start with a letter!");
-    return false;
-  };
-};
 
 // given a text field,
   // gets the first character and returns it
@@ -146,6 +128,7 @@ myApp.getFirstChar = function(textField) {
 
 // given a character and array,
   // filter array based on character inputted and returns a filtered array
+  // if the character inputted is not a letter, it will return the unchanged array argument
 myApp.filterArrayByCharacter = function (character, nameArray) {
   const filteredArray = [];
   const regex = /^[a-zA-Z]+$/;
@@ -178,34 +161,45 @@ myApp.filterArrayByCharacter = function (character, nameArray) {
 };
 
 // on form submit,
-  // 
+// 
 $('form').on('submit', function(e) {
   e.preventDefault();
+  // create an object to hold the generated names
+  const generatedNames = {};
+  
+  // randomize checked textboxes
+  if ($('input[type=checkbox]:checked')) {
+    const checkedFields = [];
+    // grab each value attribute from checked checkboxes and place them in an array
+      // solution from https://www.tutorialrepublic.com/faq/how-to-get-the-values-of-selected-checkboxes-in-a-group-using-jquery.php
+    $.each($('input[type=checkbox]:checked'), function () {
+      checkedFields.push($(this).val());
+    });
+    checkedFields.forEach( e => {
+      // get the first character in the text box to use in our filter
+      // const charForFilter = myApp.getFirstChar($(`input[name=${e}]`));
+      const charForFilter = myApp.getFirstChar($(`input[name=${e}]`));
+      // get a filtered array based on the character passed
+      const arrayToUse = myApp.filterArrayByCharacter(charForFilter, myApp[e])
+      
+      generatedNames[e] = myApp.randomizeName(arrayToUse);
+      
+    });
+  // then randomize the values of the text inputs
+  }
 
-    if ($('input[type=checkbox]:checked')) {
-      const checkedFields = [];
-      // grab each value attribute from checked checkboxes and place them in an array
-        // solution from https://www.tutorialrepublic.com/faq/how-to-get-the-values-of-selected-checkboxes-in-a-group-using-jquery.php
-      $.each($('input[type=checkbox]:checked'), function () {
-        checkedFields.push($(this).val());
-      });
+  // don't randomize unchecked textboxes
+  const uncheckedFields = [];
+  $.each($('input[type=checkbox]:not(:checked)'), function () {
+    uncheckedFields.push($(this).val());
+  });
 
-      checkedFields.forEach( e => {
-        // use the elements in checkedFields to get the associated input[text]
-        const $targetInput = $(`input[id=${e}]`);
-        // use the name value for the input[text] to get the associated array
-        const inputName = $targetInput.attr('name');
-        const charForFilter = myApp.getFirstChar($(`input[name=${inputName}]`));
-
-        const arrayToUse = myApp.filterArrayByCharacter(charForFilter, myApp[inputName])
-        myApp.randomizeField($(`input[name=${inputName}]`), arrayToUse);
-        
-      });
-    // then randomize the values of the text inputs
-  };
+  uncheckedFields.forEach( e => {
+    generatedNames[e] = $(`input[name=${e}]`).val();
+  });
 
   // call function to generate string
-  myApp.generateString();
+  myApp.generateString(generatedNames);
 });
 
 
