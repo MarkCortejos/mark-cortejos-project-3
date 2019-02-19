@@ -1,0 +1,39 @@
+header {
+  div {
+    background-repeat: no-repeat; 
+    background-position: top left;
+    background-size: cover;
+    color: #fff;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(5px 5px 10px #111);
+  }
+  
+  .main-title {
+    background-image: url('assets/andrew-schultz-1057022-unsplash.jpg'); 
+  }
+  
+  .sub-title {
+    background-image: url('assets/rawpixel-645296-unsplash.jpg'); 
+    // background-image: url('assets/nico-mksmc-1324406-unsplash.jpg'); 
+  }
+
+  h1, h2 {
+    font-family: $font-headings;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 6.2rem;
+    line-height: 4.5rem;
+  }
+  
+  h2 {
+    font-size: 3rem;
+    line-height: 2.6rem;
+  }
+}

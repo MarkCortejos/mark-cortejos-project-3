@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Source+Sans+Pro:900" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <title>Mad Max Name Generator</title>
 </head>
@@ -14,73 +14,78 @@
   <div class="wrapper">
 
     <header>
-      <h1>Mad Max</h1>
-      <h2>Name Generator</h2>      
+      <div class="main-title">
+        <h1>Mad Max</h1>
+      </div>
+      <div class="sub-title">
+        <h2>Name Generator</h2>
+      </div>
     </header>
     
     <main>
+      <!-- JUST SOME STORY FLUFF -->
+      <p>"The Resource Wars left the world a blighted, hellish desert. In this unforgiving landscape, who you were before the world ended doesn't matter. All that matters now is the trusty metal warhorse that is your car and new names for you both to match this lawless new world..."</p>
+      
+      <div class="name-container" aria-live="polite" role="status">
+        <!-- DISPLAY NAME -->
+      </div>
+      
       <div class="generator">
-        <p>Enter your first and last name and click generate to roll your new persona! If you want to save a name, you can do so by toggling off the randomizer for those textboxes.</p>
-        
+        <!-- DESCRIBE HOW TO USE GENERATOR -->
+        <p>Enter your name into the textboxes, then ride into the wasteland with your new post-apocalytic persona! If you want to hold on to a name, copy it into the textbox and turn off the textbox's randomizer by clicking on the dice.</p>
         <form action="" class="name-generator">
           <div class="flex-container">
-            <div>
+            <div class="text-box">
               <label for="first-name"><span class="visually-hidden">Enter First Name</span></label>
               <input type="text" id="first-name" name="first" placeholder="Name">
             </div>
             
             <div class="randomizer">
-              <input type="checkbox" id="first-randomizer" name="first-randomizer" value="first" checked>
-              <label for="first-randomizer"><i class="fas fa-dice"></i></label>
+              <input class="visually-hidden" type="checkbox" id="first-randomizer" name="first-randomizer" value="first" checked>
+              <label class="flex-container" for="first-randomizer"><i class="fas fa-dice" title="Randomizer"><span class="visually-hidden">First Name Randomizer Dice</span></i></label>
             </div>
           </div>
           
           <div class="flex-container">
-            <div>
+            <div class="text-box">
               <label for="second-name"><span class="visually-hidden">Enter Surname</span></label>
               <input type="text" id="second-name" name="second" placeholder="Surname">
             </div>
             
             <div class="randomizer">
-              <input type="checkbox" id="second-randomizer" name="second-randomizer" value="second" checked>
-              <label for="second-randomizer"><i class="fas fa-dice"></i></label>
+              <input class="visually-hidden" type="checkbox" id="second-randomizer" name="second-randomizer" value="second" checked>
+              <label class="flex-container" for="second-randomizer"><i class="fas fa-dice"><span class="visually-hidden">Surname Randomizer Dice</span></i></label>
             </div>
           </div>
           
           <div class="flex-container">
-            <div>
+            <div class="text-box">
               <label for="car-name"><span class="visually-hidden">Enter Car Name</span></label>
               <input type="text" id="car-name" name="car" placeholder="Car Name">
             </div>
             
             <div class="randomizer">
-              <input type="checkbox" id="car-randomizer" name="car-randomizer" value="car" checked>
-              <label for="car-randomizer"><i class="fas fa-dice"></i></label>
+              <input class="visually-hidden" type="checkbox" id="car-randomizer" name="car-randomizer" value="car" checked>
+              <label class="flex-container" for="car-randomizer"><i class="fas fa-dice"><span class="visually-hidden">Car Name Randomizer Dice</span></i></label>
             </div>
           </div>
           
-          <input type="submit" value="Generate">
+          <button>
+              Ride into the wasteland! 
+          </button>
         </form> 
-      
       </div> <!-- END GENERATOR -->
-
-      <div class="generated-name">
-        <p>The Gas Wars left the world a blighted, post-apocalyptic desert...</p>
-        <p>Who you were before, matters no longer. Now, you ride into the lawless, bandit-infested wastes as...</p>
-        <h3></h3>
-      </div>
-
     </main>
     
+    <footer>
+      <small>The 'Mad Max' franchise and its characters are the creative property of their respective owners.</small>
+    </footer>
   </div> <!-- END WRAPPER -->
   
-  <footer>
-    <p>All rights to the Mad Max franchise are reserved by Warner Bros.</p>
-  </footer>
   
   <!-- jQuery and JS script -->
   <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
-  
+
   <script src="scripts.js"></script>
 </body>
 </html>

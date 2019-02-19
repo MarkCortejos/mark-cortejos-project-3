@@ -1,0 +1,80 @@
+.name-container {
+  display: none;
+  font-weight: bold;
+}
+
+.generated-name em {
+  font-size: 1.8rem;
+  text-decoration: underline;
+  font-style: normal;
+}
+
+.generator {
+  p {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: normal;
+  }
+}
+
+form {
+  filter: drop-shadow(2px 2px 5px #111);
+}
+
+.text-box {
+  margin: 0 5px;
+}
+
+input {
+  &:hover, &:focus{
+    filter: drop-shadow(2px 2px 7px whitesmoke);
+  }
+}
+
+input[type=text] {
+  padding: 5px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+input[type=checkbox] {
+  position: absolute;
+  left: -1000px;
+  opacity: 0;
+}
+
+.randomizer {
+  label {
+    position: relative;
+    width: 44px;
+    height: 44px;
+  
+    &:hover {
+      color: whitesmoke;
+    }
+    
+    i {
+      font-size: 30px;
+    }
+  }
+}
+
+input[type=checkbox]:focus + label {
+  color: whitesmoke;
+}
+
+input[type=checkbox]:not(:checked) + label {
+  &::after {
+    content:"\f00d";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: maroon;
+    font-size: 44px;
+    position: absolute;
+  }
+}
+
+button {
+  text-transform: uppercase;
+  padding: 10px;
+}

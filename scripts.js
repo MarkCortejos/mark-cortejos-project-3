@@ -1,101 +1,195 @@
 const myApp = {}
 
-myApp.first = [
-  'Accadacca',
-  'Arvo',
-  'Ankle Biter',
-  'Barbie',
-  'Bogan',
-  'Brekky',
-  'Chook',
-  'Cobber',
-  'Clucky',
-  'Dardy',
-  'Devo',
-  'Drongo',
-  'E1',
-  'E2',
-  'E3',
-  'Flannie',
-  'Flanno',
-  'Furphy',
-  'Goon',
-  'Galah',
-  'Grot',
-  'Hoon',
-  'Hard Yakka',
-  'Heaps',
-  'Iffy',
-  'I2',
-  'I3',
-  'Knick',
-  'K2',
-  'K3',
-  'Lappy',
-  'Lollie',
-  'Legless',
-  'Maccas',
-  'Moz',
-  'M3',
-  'Nuddy',
-  'Nosh',
-  'N3',
-  'O1',
-  'O2',
-  'O3',
-  'Pash',
-  'Piss',
-  'P3',
-  'Rakka',
-  'Rellie',
-  'Rello',
-  'Sheila',
-  'Slab',
-  'Straya',
-  'Two-Up',
-  'True Blue',
-  'Tucker',
-  'Uwie',
-  'U2',
-  'U3',
-  'V1',
-  'V2',
-  'V3',
-  'W1',
-  'W2',
-  'W3',
-  'X1',
-  'X2',
-  'X3',
-  'Yonks',
-  'Y2',
-  'Y3',
-  'Z1',
-  'Z2',
-  'Zed'
-];
-
-myApp.second = [
-  'the Crunch',
-  'Crasher',
-  'Slackjaw',
-  'the Massive'
-];
-
-myApp.car = [
-  'V8-Interceptor',
-  'War Rig',
-  'Razor Cola',
-  'Magnum Opus',
-  'BigFoot',
-  'Doof Wagon',
-  'Gigahorse'
-];
-
+// only build arrays after page loads
 myApp.init = function() {
-  myApp.randomizeName(myApp.first);
-  myApp.randomizeName(myApp.second);
-  myApp.randomizeName(myApp.car);
+  myApp.first = [
+    'Awesome',
+    'Avo',
+    'The Ankle-Biter',
+    'Beef',
+    'Brave',
+    'The Backbreaker',
+    'Callosum',
+    'Cobber',
+    'Clarity',
+    'Dusk',
+    'Devo',
+    'Drongo',
+    'Easy',
+    'Enormous',
+    'Extra',
+    'Forever',
+    'Funky',
+    'Flak-Cannon',
+    'Frenum',
+    'Goon',
+    'Greatness',
+    'Groot',
+    'Hardball',
+    'High-Five',
+    'Heavy',
+    'Iffy',
+    'Incog',
+    'Intrepid',
+    'Knight-Blazer',
+    'Knuckles',
+    'Killspree',
+    'Larp',
+    'Longbottom',
+    'Legless',
+    'Magic',
+    'Mighty',
+    'Mini',
+    'Megas',
+    'Nighttime',
+    'Nosh',
+    'Niddick',
+    'Oxy',
+    'Orelius',
+    'Oshkosh',
+    'Pash',
+    'Pectoras',
+    'Pate',
+    'Rakka',
+    'Rhinus',
+    'Ratchet',
+    'The Shepherd',
+    'Slabface',
+    'Straya',
+    'T-Bone',
+    'True-Blue',
+    'Topknot',
+    'Uwie',
+    'Uppercut',
+    'Uvulis',
+    'Valiant',
+    'Vivisection',
+    'The Voracious',
+    'Worm-Master',
+    'Wax',
+    'Whip',
+    'X-Eye',
+    'Xeno',
+    'Xanthus',
+    'Yonkers',
+    'Young',
+    'The Yakitori',
+    'Zygo',
+    'Zephyr',
+    'Zed'
+  ];
+  
+  myApp.second = [
+    'the Awful',
+    'Arrow-to-the-Knee',
+    'the Brackish',
+    'Bigosh',
+    'Bonanza',
+    'the Cash Crasher',
+    'Carcharodon',
+    'the Defenestrator',
+    'Dauntless',
+    'the Excellent',
+    'Excelsior',
+    'Ferocious',
+    'the Freaky',
+    'Gorgonzola',
+    'the Greasebucket',
+    'Hype-Master',
+    'the Hunger Monger',
+    'Ignition',
+    'Initiative',
+    'Jackknife',
+    'the Jackal',
+    'Killjoy',
+    'Kerberos',
+    'the Laughing',
+    'Lift',
+    'Mecha',
+    'the Massive',
+    'Nineballer',
+    'Ninja',
+    'the Operatic Operator',
+    'Orpheus',
+    'Pleasant',
+    'the Pessimist Specialist',
+    'the Quiet',
+    'Quiche',
+    'Reprobate',
+    'the Racer Eraser',
+    'Slackjaw',
+    'the Sidewinder',
+    'Toothcracker',
+    'the Turbo Turbot',
+    'the Upside-down',
+    'Uber',
+    'Vital',
+    'Vortex',
+    'the Wanderer',
+    'Wind',
+    'X',
+    'Xanadu',
+    'the Yuppie',
+    'Yamato',
+    'the Zealot',
+    'Zodiac'
+  ];
+  
+  myApp.car = [
+    'Armada Prime',
+    'Astral Seeker',
+    'Big Foot',
+    'Bone Wagon',
+    'Caltrop #7',
+    'Cutthroat of the Wastes',
+    'Doof Wagon',
+    'Demented One',
+    'Extreme Mobile',
+    'Eater of Worlds',
+    'Fabulous #5',
+    'Flashy Flash',
+    'Gingerbread Car',
+    'Gafelta Fish',
+    'Homing Hotdog',
+    'Hot Rod Matrix',
+    'Infernus Maximus',
+    'Initial D',
+    'Interceptor V-8',
+    'Jackrabbit',
+    'Juggernaut',
+    'Knight Rider',
+    'Khromehound',
+    'Lovebug',
+    'Laughing Hyena',
+    'Magnum Opus',
+    'Mach V',
+    'Neo Blur',
+    'Nova Cat',
+    'Orphan #77',
+    'Omnimach',
+    'Pursuit Special',
+    'Phantom Omega',
+    'Quick Brown Fox',
+    'Quetzalcoatl',
+    'Razor Cola',
+    'Righteous Indignation',
+    'Skullbutt',
+    'Sonic Boom',
+    'Turbo Max',
+    'Trekker Decker',
+    'Unlimited Engine Works',
+    'Ultra Car',
+    'Voodoo',
+    'Veteran Virtue',
+    'War Rig',
+    'Wonder Wulf',
+    'X-Guard',
+    'Xenocars',
+    'Yellow #1',
+    'Yokozuna',
+    'Z Fighter',
+    'Zalgo Cometh'
+  ];
 }
 
 // given an array, 
@@ -111,13 +205,19 @@ myApp.randomizeName = function(nameArray) {
   return nameArray[randNum];
 };
 
-// create string from inputs and displays it
+// given the nameObject, 
+  // builds a string from the values in it and display the string
 myApp.generateString = function(nameObject) {
   const first = nameObject.first;
   const second = nameObject.second;
   const car = nameObject.car;
-  const string = `${first} ${second}, driver of the ${car}!`;
-  $('.generated-name h3').text(string);
+  const string =
+    `<p class="generated-name">"Leaving your old identity behind, you ride into the bandit-infested wastes as<br> 
+      <em>${first} ${second}, driver of the ${car}</em>!"
+    </p>`;
+  $('.name-container').css('display','block');
+  $('.name-container').empty();
+  $('.name-container').append(string);
 }
 
 // given a text field,
@@ -133,14 +233,15 @@ myApp.filterArrayByCharacter = function (character, nameArray) {
   const filteredArray = [];
   const regex = /^[a-zA-Z]+$/;
 
-  // check if the character is a letter,
-  if (character.match(regex)) {
+  // check if the passed character is a letter,
     // if yes, then filter nameArray by the letter
+    // if no, then return the unfiltered array
+  if (character.match(regex)) {
     nameArray.forEach( e => {
       // if the name starts with 'the', 
         // skip it and compare the fourth character (after 'the ')
           // push the name to the filtered array if it's a match
-      if (e.substr(0,3) === "the") {
+      if (e.substr(0,3).toLowerCase() === "the") {
         if (e.charAt(4).toLowerCase() === character.toLowerCase()) {
           filteredArray.push(e);
         };
@@ -155,13 +256,15 @@ myApp.filterArrayByCharacter = function (character, nameArray) {
     });
     return filteredArray;
   } else {
-    // if no, then return the unfiltered array
     return nameArray
   }
 };
 
 // on form submit,
-// 
+  // check for checked textboxes to randomize
+    // randomize names based on the input in the textbox (if any)
+    // don't randomize unchecked textboxes
+  // display the names
 $('form').on('submit', function(e) {
   e.preventDefault();
   // create an object to hold the generated names
@@ -175,17 +278,15 @@ $('form').on('submit', function(e) {
     $.each($('input[type=checkbox]:checked'), function () {
       checkedFields.push($(this).val());
     });
+    
     checkedFields.forEach( e => {
       // get the first character in the text box to use in our filter
-      // const charForFilter = myApp.getFirstChar($(`input[name=${e}]`));
       const charForFilter = myApp.getFirstChar($(`input[name=${e}]`));
       // get a filtered array based on the character passed
       const arrayToUse = myApp.filterArrayByCharacter(charForFilter, myApp[e])
-      
+      // generate a name from the array and add it to the generatedNames object
       generatedNames[e] = myApp.randomizeName(arrayToUse);
-      
     });
-  // then randomize the values of the text inputs
   }
 
   // don't randomize unchecked textboxes
@@ -198,7 +299,7 @@ $('form').on('submit', function(e) {
     generatedNames[e] = $(`input[name=${e}]`).val();
   });
 
-  // call function to generate string
+  // call function to generate string and display it
   myApp.generateString(generatedNames);
 });
 

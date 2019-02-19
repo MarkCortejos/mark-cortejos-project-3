@@ -149,16 +149,25 @@ html {
   font-size: 125%; }
 
 body {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(200, 50, 50, 0.1)), to(rgba(200, 50, 50, 0.6))), url("assets/lukasz-szmigiel-221650-unsplash.jpg");
-  background: -webkit-linear-gradient(bottom, rgba(200, 50, 50, 0.1), rgba(200, 50, 50, 0.6)), url("assets/lukasz-szmigiel-221650-unsplash.jpg");
-  background: -o-linear-gradient(bottom, rgba(200, 50, 50, 0.1), rgba(200, 50, 50, 0.6)), url("assets/lukasz-szmigiel-221650-unsplash.jpg");
-  background: linear-gradient(to top, rgba(200, 50, 50, 0.1), rgba(200, 50, 50, 0.6)), url("assets/lukasz-szmigiel-221650-unsplash.jpg");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(175, 20, 20, 0.2)), to(rgba(175, 20, 20, 0.6))), url("assets/lukasz-szmigiel-221650-unsplash.jpg");
+  background: -webkit-linear-gradient(bottom, rgba(175, 20, 20, 0.2), rgba(175, 20, 20, 0.6)), url("assets/lukasz-szmigiel-221650-unsplash.jpg");
+  background: -o-linear-gradient(bottom, rgba(175, 20, 20, 0.2), rgba(175, 20, 20, 0.6)), url("assets/lukasz-szmigiel-221650-unsplash.jpg");
+  background: linear-gradient(to top, rgba(175, 20, 20, 0.2), rgba(175, 20, 20, 0.6)), url("assets/lukasz-szmigiel-221650-unsplash.jpg");
   background-size: cover;
-  text-align: center; }
+  background-repeat: no-repeat;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1.6; }
+
+p {
+  font-size: 1.6rem;
+  color: black;
+  font-weight: bold;
+  text-shadow: 2px 2px 7px lightgrey; }
 
 .wrapper {
   max-width: 800px;
-  padding: 5%;
+  padding: 1% 5%;
   margin: 0 auto; }
 
 .flex-container {
@@ -171,12 +180,104 @@ body {
   flex-direction: row;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+header div {
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  color: #fff;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-filter: drop-shadow(5px 5px 10px #111);
+  filter: drop-shadow(5px 5px 10px #111); }
+
+header .main-title {
+  background-image: url("assets/andrew-schultz-1057022-unsplash.jpg"); }
+
+header .sub-title {
+  background-image: url("assets/rawpixel-645296-unsplash.jpg"); }
+
+header h1, header h2 {
+  font-family: "Source Sans Pro", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+  padding: 0; }
+
+header h1 {
+  font-size: 6.2rem;
+  line-height: 4.5rem; }
+
+header h2 {
+  font-size: 3rem;
+  line-height: 2.6rem; }
+
+.name-container {
+  display: none;
+  font-weight: bold; }
+
+.generated-name em {
+  font-size: 1.8rem;
+  text-decoration: underline;
+  font-style: normal; }
+
+.generator p {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: normal; }
+
+form {
+  -webkit-filter: drop-shadow(2px 2px 5px #111);
+  filter: drop-shadow(2px 2px 5px #111); }
+
+.text-box {
+  margin: 0 5px; }
+
+input:hover, input:focus {
+  -webkit-filter: drop-shadow(2px 2px 7px whitesmoke);
+  filter: drop-shadow(2px 2px 7px whitesmoke); }
+
+input[type=text] {
+  padding: 5px;
+  margin: 10px 0;
+  text-align: center; }
+
+input[type=checkbox] {
+  position: absolute;
+  left: -1000px;
+  opacity: 0; }
+
+.randomizer label {
+  position: relative;
+  width: 44px;
+  height: 44px; }
+  .randomizer label:hover {
+    color: whitesmoke; }
+  .randomizer label i {
+    font-size: 30px; }
+
+input[type=checkbox]:focus + label {
+  color: whitesmoke; }
+
+input[type=checkbox]:not(:checked) + label::after {
+  content: "\f00d";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: maroon;
+  font-size: 44px;
+  position: absolute; }
+
+button {
+  text-transform: uppercase;
+  padding: 10px; }
 
 footer {
-  width: 100%;
-  background: black;
-  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,6 +286,10 @@ footer {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
-  footer p {
-    color: white; }
+  align-items: center;
+  margin-top: 30px;
+  padding: 0; }
+
+@media (max-width: 600px) {
+  html {
+    font-size: 100%; } }

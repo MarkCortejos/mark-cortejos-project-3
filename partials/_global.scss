@@ -1,3 +1,6 @@
+$font-headings: 'Source Sans Pro', sans-serif;
+$font-body: 'Josefin Sans', sans-serif;
+
 html {
   font-size: 125%;
 }
@@ -6,17 +9,27 @@ body {
   background: 
     linear-gradient(
       to top,
-      rgba(200, 50, 50, 0.1), 
-      rgba(200, 50, 50, 0.6)
+      rgba(175, 20, 20, 0.2), 
+      rgba(175, 20, 20, 0.6)
     ), 
     url('assets/lukasz-szmigiel-221650-unsplash.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
+  font-family: $font-body;
+  line-height: 1.6;
+}
+
+p {
+  font-size: 1.6rem;
+  color: black;
+  font-weight: bold;
+  text-shadow: 2px 2px 7px lightgrey;
 }
 
 .wrapper {
   max-width: 800px;
-  padding: 5%;
+  padding: 1% 5%;
   margin: 0 auto;
 }
 
@@ -24,5 +37,5 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
-
