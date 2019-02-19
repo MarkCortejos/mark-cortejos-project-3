@@ -11,9 +11,9 @@
 
 .generator {
   p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-style: italic;
-    font-weight: normal;
+    // font-weight: normal;
   }
 }
 
@@ -48,6 +48,7 @@ input[type=checkbox] {
     position: relative;
     width: 44px;
     height: 44px;
+    color: #111;
   
     &:hover {
       color: whitesmoke;
